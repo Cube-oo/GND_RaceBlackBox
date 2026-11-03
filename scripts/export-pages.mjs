@@ -17,7 +17,13 @@ async function copy(from,to){
   else{await fs.mkdir(path.dirname(to),{recursive:true});await fs.copyFile(from,to);}
 }
 try{
-  for(const item of allowed)await copy(path.join(root,item),path.join(stage,item));
+  for(const item of allowed){
+  try{
+    await copy(path.join(root,item),path.join(stage,item));
+  }catch(error){
+    if(item!=='.gitignore'||error.code!=='ENOENT')throw error;
+  }
+}
   // Fresh temporary archives avoid retaining obsolete entries from a previous ZIP.
   const sourceArchive=path.join(os.tmpdir(),`${path.basename(stage)}-source.zip`);
   try{zip(stage,sourceArchive);await fs.copyFile(sourceArchive,path.join(root,'dist/source.zip'));}finally{await fs.rm(sourceArchive,{force:true});}
