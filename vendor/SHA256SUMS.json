@@ -1,0 +1,16 @@
+{
+  "src/cache.js": "1beb15eb1d5d5c0f21ccbe21467459deb2e9eead8efd5ee4c281800c3c18f8fc",
+  "src/datastream.js": "2c455967aa4e5d2f50bf2ccfa455433182bb174f90bbe0aee30f28b44c3d0d70",
+  "src/decoders.js": "a0f3810ea2219b5717cd2e08aac7856f1ba461656e11f2529857a2d39ecbc536",
+  "src/flightlog.js": "cccc8d31050a21d6d71a5d24ea6e8485317753742d25f14974c17148c317db37",
+  "src/flightlog_fielddefs.js": "136d8a303834a0c93d4d2a834334ed876d5a29acac0691f48920cdeb26bf909f",
+  "src/flightlog_fields_presenter.js": "e36abbd53209de409b6ec4e0c1b0fe8bc91e02a26077bde739ae16516f358229",
+  "src/flightlog_index.js": "0dc06a031089f8963e3cebd5e49a5a9fd7c65e7084cce7700b868496c97654d0",
+  "src/flightlog_parser.js": "263a3e51e98a1deec671f5a14e498a3064df90944228b8ff3c8fce2074ea5529",
+  "src/gps_transform.js": "f64a5b9d21b0672c85e1d67352acf6e2d07be263f6e5ed7c8ef7aa6ac43529ac",
+  "src/imu.js": "538ade2a55eee06038cc965176057053554faf8e0f689bffe1c4417ab5b947b4",
+  "src/pref_storage.js": "4c18ee5977c896e7c780e947da87a9afe88d7ef5d67cc4bd519a8a8f19117f92",
+  "src/stores/settings.js": "525e49bbf4500caa7e42dcc70822fe066cb197c4c2058608c967f79a315a94b6",
+  "src/tools.js": "aa84d8af6f183113585718aca46b9549e70eb975c32a2c07c590ef9a617c9708",
+  "src/user_settings_data.js": "a42601c1f6d0145a4c8d40f28ace6d6643b5121436868c4279f1b8d2311c2cfe"
+}

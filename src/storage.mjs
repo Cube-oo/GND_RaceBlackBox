@@ -1,0 +1,5 @@
+let connection;
+function db(){return connection??=new Promise((resolve,reject)=>{const r=indexedDB.open('gnd-race',1);r.onupgradeneeded=()=>r.result.createObjectStore('sessions',{keyPath:'id'});r.onerror=()=>reject(r.error);r.onsuccess=()=>resolve(r.result);});}
+export async function loadSessions(){const d=await db();return new Promise((resolve,reject)=>{const tx=d.transaction('sessions'),r=tx.objectStore('sessions').getAll();r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});}
+export async function saveSession(session){const d=await db();return new Promise((resolve,reject)=>{const tx=d.transaction('sessions','readwrite');tx.objectStore('sessions').put(session);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);});}
+export async function deleteSession(id){const d=await db();return new Promise((resolve,reject)=>{const tx=d.transaction('sessions','readwrite');tx.objectStore('sessions').delete(id);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);});}
